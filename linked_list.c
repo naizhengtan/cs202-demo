@@ -13,6 +13,7 @@ int list_size(const list_t *h) {
         r += 1;
         p = p->next;
     }
+    return r;
 }
 
 int list_empty(const list_t *h) {
