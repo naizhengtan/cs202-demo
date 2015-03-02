@@ -10,4 +10,4 @@ hack: hack.c
 	gcc -o hack hack.c
 
 clean:
-	rm -f hack survey
+	rm -f hack survey test_linked_list
