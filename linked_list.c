@@ -44,11 +44,16 @@ node_t *list_find_before(const list_t *h, int id) {
 
 node_t *list_delete(list_t *h, int id) {
     node_t *r = NULL;
-    node_t *p = list_find_before(h, id); // bug
+    if (*h && (*h)->id == id) {
+        r = *h;
+        *h = NULL;
+        return r;
+    }
+    node_t *p = list_find_before(h, id); 
     if (p) {
         r = p->next;
-        r->next = NULL; // bug
         p->next = p->next->next;
+        r->next = NULL; 
     }
     return r;
 }
