@@ -31,8 +31,17 @@ void test_delete() {
     assert(list_size(&h) == 2);
 }
 
+void core_dump_test() {
+	int size = 0;
+	list_t h;
+	list_init(&h);
+	size = list_size(&h);	
+	printf("list size is: %d\n", size);
+}
 
 int main () {
     test_delete();
     test_delete_one();
+	core_dump_test();
+	printf("Pass\n");
 }

@@ -9,10 +9,10 @@ void list_init(list_t *h) {
 int list_size(const list_t *h) {
     node_t *p = *h;
     int r = 0;
-    while (p) {
+    do {
         r += 1;
         p = p->next;
-    }
+    } while (p);
     return r;
 }
 
@@ -49,7 +49,8 @@ node_t *list_delete(list_t *h, int id) {
         *h = NULL;
         return r;
     }
-    node_t *p = list_find_before(h, id); 
+	// Here we have a syntax bug
+    node_t *p = list_find_before(h, id)
     if (p) {
         r = p->next;
         p->next = p->next->next;
