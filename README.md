@@ -1,14 +1,11 @@
-# Productivity demo
+# Software Skills
 
-## navigation
-* lab 1 - booting sequence
-* lab 2 - cmd_print, cmd_exec. Leave cmd_parse as an exercise in lab?
+There are two bugs inside the code:
 
+(1) Syntax bug
 
-## gdb demo
-fix two bugs in linked_list.c caught by test_linked_list.c
+(2) Segmentation fault
 
-## more gdb and C memory concept, struct
-Buffer overflow a C struct using gdb as a guide (find address, etc.)
-use hack.c to overflow the "name" buffer in survey.c
+Try to use navigating skills with compilor error message to solve the 
+first one. And gdb with core dump file to solve second.
 
